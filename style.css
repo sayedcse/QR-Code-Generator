@@ -4,6 +4,44 @@ body {
     padding: 0;
 }
 
+.web-info {
+    animation: slideIn 1s ease;
+    transition: all 0.2s;
+}
+
+#generated,
+button,
+#save-btn {
+    transition: all ease-in-out 0.1s;
+}
+
+img {
+    animation: fadeIn 1s;
+    transition: all ease-in 0.3s;
+}
+
 #spinner {
     display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateX(65%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-65%);
+        filter: blur(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+        filter: blur(0);
+    }
 }
